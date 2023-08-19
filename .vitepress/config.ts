@@ -3,8 +3,8 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: 'zh-CN',
-  title: "兔子的悦心世界",
-  description: "探索编程与创意，欢迎来到兔子的悦心世界。",
+  title: "兔子的数字小窝",
+  description: "探索编程与创意，欢迎来到兔子的数字小窝。",
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
   ],
@@ -41,7 +41,7 @@ export default defineConfig({
     ],
 
     footer: {
-      message: '兔子的悦心世界',
+      message: '兔子的数字小窝',
       copyright: 'Copyright © 2023-present Sha Fucheng'
     },
 
