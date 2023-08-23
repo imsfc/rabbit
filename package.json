@@ -10,9 +10,7 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "3.0.0-rc.1",
-    "astro": "3.0.0-rc.5"
-  },
-  "devDependencies": {
+    "astro": "3.0.0-rc.5",
     "prettier": "^3.0.2",
     "prettier-plugin-astro": "^0.12.0"
   }
