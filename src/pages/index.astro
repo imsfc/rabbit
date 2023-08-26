@@ -1,18 +1,166 @@
 ---
+import { SITE_TITLE, SITE_DESCRIPTION, HOME_TAGLINE } from '@/consts'
+import Layout from '@/layouts/Layout.astro'
+import Footer from '@components/Footer.astro'
 import logo from '@assets/logo.svg'
 
-const title = 'Hello astro!'
+const logoImgAlt = 'Rabbit'
 ---
 
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href={logo.src} />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
-  <body>
-    <h1>{title}</h1>
-  </body>
-</html>
+<Layout title={`${SITE_TITLE} | ${SITE_DESCRIPTION}`}>
+  <!-- content -->
+  <div class:list={['w-full max-w-full grow shrink-0']}>
+    <!-- home -->
+    <div class:list={['pb-24', 'md:pb-32']}>
+      <!-- hero -->
+      <div
+        class:list={[
+          '-mt-16 px-6 pt-28 pb-12',
+          'sm:px-12 sm:pt-36 sm:pb-16',
+          'lg:px-16',
+        ]}
+      >
+        <!-- container -->
+        <div
+          class:list={[
+            'mx-auto max-w-6xl',
+            'flex flex-col text-center',
+            'lg:text-left lg:flex-row',
+          ]}
+        >
+          <!-- main -->
+          <div
+            class:list={[
+              'order-2 relative z-10 grow shrink-0',
+              'lg:order-1 lg:w-2/3 lg:max-w-[37rem]',
+            ]}
+          >
+            <!-- name -->
+            <h1
+              class:list={[
+                '-tracking-[.025rem] text-transparent font-bold whitespace-pre-wrap',
+                'mx-auto max-w-[24.5rem] text-[2rem] leading-10',
+                'sm:max-w-xl sm:text-5xl sm:leading-[3.5rem]',
+                'lg:mx-0 lg:text-[3.5rem] lg:leading-[4rem]',
+              ]}
+            >
+              <span
+                class:list={[
+                  'bg-gradient-to-l from-green-400 from-30% to-sky-400',
+                  'bg-clip-text',
+                ]}
+                style="background-image: linear-gradient(-60deg, var(--tw-gradient-stops))"
+                >{SITE_TITLE}</span
+              >
+            </h1>
+            <!-- text -->
+            <p
+              class:list={[
+                'mx-auto max-w-[24.5rem]',
+                '-tracking-[.025rem] whitespace-pre-wrap',
+                'text-[2rem] leading-10 font-bold',
+                'sm:max-w-xl sm:text-5xl sm:leading-[3.5rem]',
+                'lg:mx-0',
+              ]}
+            >
+              {SITE_DESCRIPTION}
+            </p>
+            <!-- tagline -->
+            <p
+              class:list={[
+                'mx-auto max-w-[24.5rem] pt-2',
+                'text-lg font-medium whitespace-pre-wrap',
+                'text-[#3c3c43] opacity-[.78]',
+                'dark:text-slate-300 dark:text-opacity-[.6]',
+                'sm:pt-3 sm:text-xl sm:leading-8',
+                'lg:mx-0 lg:text-2xl lg:leading-9',
+              ]}
+            >
+              {HOME_TAGLINE}
+            </p>
+            <!-- actions -->
+            <div
+              class:list={[
+                'flex flex-wrap justify-center',
+                '-m-[.375rem] pt-6',
+                'sm:pt-8',
+                'lg:justify-start',
+              ]}
+            >
+              <!-- action -->
+              <div class:list={['p-[.375rem] shrink-0']}>
+                <!-- button -->
+                <a
+                  class:list={[
+                    'inline-block whitespace-nowrap touch-manipulation',
+                    'border border-transparent px-5 rounded-full',
+                    'transition-colors ease-[ease] duration-[.25s]',
+                    'text-sm font-semibold leading-[2.375rem] text-center',
+                    'text-white bg-green-400 hover:bg-green-500 active:bg-green-600',
+                  ]}
+                  href="/blog/">博客</a
+                >
+              </div>
+              <!-- action -->
+              <div class:list={['p-[.375rem] shrink-0']}>
+                <!-- button -->
+                <a
+                  class:list={[
+                    'inline-block whitespace-nowrap touch-manipulation',
+                    'border border-transparent px-5 rounded-full',
+                    'transition-colors ease-[ease] duration-[.25s]',
+                    'text-sm font-semibold leading-[2.375rem] text-center',
+                    'bg-zinc-100 hover:bg-zinc-200 active:bg-zinc-300',
+                  ]}
+                  href="/quick-reference-notes/">速查笔记</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- image -->
+          <div
+            class:list={[
+              'order-1 -mx-6 -mt-[4.75rem] -mb-12',
+              'lg:order-2 lg:min-h-full lg:grow',
+            ]}
+          >
+            <!-- image-container -->
+            <div
+              class:list={[
+                'relative mx-auto w-80 h-80',
+                'sm:w-[24.5rem] sm:h-[24.5rem]',
+                'lg:flex lg:justify-center lg:items-center',
+                'lg:w-full lg:h-full lg:-translate-x-8 lg:-translate-y-8',
+              ]}
+            >
+              <!-- image-bg -->
+              <div
+                class:list={[
+                  'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full',
+                  'bg-gradient-to-tl from-green-400 from-50% to-sky-400 to-50%',
+                  'w-48 h-48 blur-2xl',
+                  'sm:w-64 sm:h-64 sm:blur-[3.5rem]',
+                  'lg:w-80 lg:h-80 lg:blur-[4.5rem]',
+                ]}
+              >
+              </div>
+              <!-- image-src -->
+              <img
+                class:list={[
+                  'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2',
+                  'max-w-48 max-h-48',
+                  'sm:max-w-64 sm:max-h-64',
+                  'lg:max-w-80 lg:max-h-80',
+                ]}
+                src={logo.src}
+                alt={logoImgAlt}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <Footer />
+</Layout>
