@@ -1,0 +1,31 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts'
+import Header from '@components/Header.astro'
+import logo from '@assets/logo.svg'
+
+const { title } = Astro.props
+---
+
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href={logo.src} />
+    <title>{title ?? SITE_TITLE}</title>
+    <meta name="description" content={SITE_DESCRIPTION} />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body
+    class:list={[
+      'w-full antialiased',
+      'bg-white text-[#3c3c43]',
+      'dark:bg-[#1b1b1f] dark:text-[#fffff5] dark:text-opacity-[.86]',
+    ]}
+  >
+    <!-- layout -->
+    <div class:list={['flex', 'flex-col', 'min-w-[20rem]', 'min-h-screen']}>
+      <Header />
+      <slot />
+    </div>
+  </body>
+</html>
