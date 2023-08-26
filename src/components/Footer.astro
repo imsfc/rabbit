@@ -1,0 +1,16 @@
+---
+import { SITE_TITLE, SITE_AUTHOR } from '@/consts'
+---
+
+<!-- footer -->
+<footer class:list={['relative px-8 py-6', 'md:py-8']}>
+  <!-- container -->
+  <div class:list={['mx-auto max-w-[90rem] text-center']}>
+    <!-- message -->
+    <p class="text-sm leading-6 font-medium opacity-[.78]">{SITE_TITLE}</p>
+    <!-- copyright -->
+    <p class="text-sm leading-6 font-medium opacity-[.78]">
+      {`Copyright © ${2023} ${SITE_AUTHOR}`}
+    </p>
+  </div>
+</footer>
