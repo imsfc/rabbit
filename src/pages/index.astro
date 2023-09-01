@@ -9,109 +9,76 @@ const logoImgAlt = 'Rabbit'
 
 <Layout title={`${SITE_TITLE} | ${SITE_DESCRIPTION}`}>
   <!-- content -->
-  <div class:list={['w-full max-w-full grow shrink-0']}>
+  <div class="w-full max-w-full grow shrink-0">
     <!-- home -->
-    <div class:list={['pb-24', 'md:pb-32']}>
+    <div class="pb-24" un-md="pb-32">
       <!-- hero -->
       <div
-        class:list={[
-          '-mt-16 px-6 pt-28 pb-12',
-          'sm:px-12 sm:pt-36 sm:pb-16',
-          'lg:px-16',
-        ]}
+        class="-mt-16 px-6 pt-28 pb-12"
+        un-sm="px-12 pt-36 pb-16"
+        un-lg="px-16"
       >
         <!-- container -->
         <div
-          class:list={[
-            'mx-auto max-w-6xl',
-            'flex flex-col text-center',
-            'lg:text-left lg:flex-row',
-          ]}
+          class="flex flex-col text-center mx-auto max-w-6xl"
+          un-lg="flex-row text-left"
         >
           <!-- main -->
           <div
-            class:list={[
-              'order-2 relative z-10 grow shrink-0',
-              'lg:order-1 lg:w-2/3 lg:max-w-[37rem]',
-            ]}
+            class="order-2 relative z-10 grow shrink-0"
+            un-lg="order-1 w-2/3 max-w-148"
           >
             <!-- name -->
             <h1
-              class:list={[
-                '-tracking-[.025rem] text-transparent font-bold whitespace-pre-wrap',
-                'mx-auto max-w-[24.5rem] text-[2rem] leading-10',
-                'sm:max-w-xl sm:text-5xl sm:leading-[3.5rem]',
-                'lg:mx-0 lg:text-[3.5rem] lg:leading-[4rem]',
-              ]}
+              class="-tracking-.1 text-transparent font-700 whitespace-pre-wrap mx-auto max-w-98 text-8 leading-10"
+              un-sm="max-w-xl text-5xl leading-14"
+              un-lg="mx-0 text-14 leading-16"
             >
               <span
-                class:list={[
-                  'bg-gradient-to-l from-green-400 from-30% to-sky-400',
-                  'bg-clip-text',
-                ]}
-                style="background-image: linear-gradient(-60deg, var(--tw-gradient-stops))"
-                >{SITE_TITLE}</span
+                class="bg-gradient-to-r from-green from-30% to-sky bg-clip-text"
+                style="--un-gradient-shape: -60deg">{SITE_TITLE}</span
               >
             </h1>
             <!-- text -->
             <p
-              class:list={[
-                'mx-auto max-w-[24.5rem]',
-                '-tracking-[.025rem] whitespace-pre-wrap',
-                'text-[2rem] leading-10 font-bold',
-                'sm:max-w-xl sm:text-5xl sm:leading-[3.5rem]',
-                'lg:mx-0',
-              ]}
+              class="-tracking-.1 whitespace-pre-wrap text-8 leading-10 font-700 mx-auto max-w-98"
+              un-sm="max-w-xl text-5xl leading-14"
+              un-lg="mx-0"
             >
               {SITE_DESCRIPTION}
             </p>
             <!-- tagline -->
             <p
-              class:list={[
-                'mx-auto max-w-[24.5rem] pt-2',
-                'text-lg font-medium whitespace-pre-wrap',
-                'text-[#3c3c43] opacity-[.78]',
-                'dark:text-slate-300 dark:text-opacity-[.6]',
-                'sm:pt-3 sm:text-xl sm:leading-8',
-                'lg:mx-0 lg:text-2xl lg:leading-9',
-              ]}
+              class="mx-auto max-w-98 pt-2 text-lg font-500 whitespace-pre-wrap text-#3c3c43 text-opacity-78"
+              un-sm="pt-3 text-xl leading-8"
+              un-lg="mx-0 text-2xl leading-9"
+              un-dark="text-slate-3 text-opacity-60"
             >
               {HOME_TAGLINE}
             </p>
             <!-- actions -->
             <div
-              class:list={[
-                'flex flex-wrap justify-center',
-                '-m-[.375rem] pt-6',
-                'sm:pt-8',
-                'lg:justify-start',
-              ]}
+              class="flex flex-wrap justify-center -m-1.5 pt-6"
+              un-sm="pt-8"
+              un-lg="justify-start"
             >
               <!-- action -->
-              <div class:list={['p-[.375rem] shrink-0']}>
+              <div class="p-1.5 shrink-0">
                 <!-- button -->
                 <a
-                  class:list={[
-                    'inline-block whitespace-nowrap touch-manipulation',
-                    'border border-transparent px-5 rounded-full',
-                    'transition-colors ease-[ease] duration-[.25s]',
-                    'text-sm font-semibold leading-[2.375rem] text-center',
-                    'text-white bg-green-400 hover:bg-green-500 active:bg-green-600',
-                  ]}
+                  class="inline-block whitespace-nowrap touch-manipulation border border-transparent px-5 rounded-full transition-colors ease-[ease] duration-250 text-sm font-600 leading-9.5 text-center text-white bg-green"
+                  un-hover="bg-green-5"
+                  un-active="bg-green-6"
                   href="/blog/">博客</a
                 >
               </div>
               <!-- action -->
-              <div class:list={['p-[.375rem] shrink-0']}>
+              <div class="p-1.5 shrink-0">
                 <!-- button -->
                 <a
-                  class:list={[
-                    'inline-block whitespace-nowrap touch-manipulation',
-                    'border border-transparent px-5 rounded-full',
-                    'transition-colors ease-[ease] duration-[.25s]',
-                    'text-sm font-semibold leading-[2.375rem] text-center',
-                    'bg-zinc-100 hover:bg-zinc-200 active:bg-zinc-300',
-                  ]}
+                  class="inline-block whitespace-nowrap touch-manipulation border border-transparent px-5 rounded-full transition-colors ease-[ease] duration-250 text-sm font-600 leading-9.5 text-center bg-zinc-1"
+                  un-hover="bg-zinc-2"
+                  un-active="bg-zinc-3"
                   href="/quick-reference-notes/">速查笔记</a
                 >
               </div>
@@ -119,39 +86,28 @@ const logoImgAlt = 'Rabbit'
           </div>
           <!-- image -->
           <div
-            class:list={[
-              'order-1 -mx-6 -mt-[4.75rem] -mb-12',
-              'lg:order-2 lg:min-h-full lg:grow',
-            ]}
+            class="order-1 -mx-6 -mt-19 -mb-12"
+            un-lg="order-2 min-h-full grow"
           >
             <!-- image-container -->
             <div
-              class:list={[
-                'relative mx-auto w-80 h-80',
-                'sm:w-[24.5rem] sm:h-[24.5rem]',
-                'lg:flex lg:justify-center lg:items-center',
-                'lg:w-full lg:h-full lg:-translate-x-8 lg:-translate-y-8',
-              ]}
+              class="relative mx-auto w-80 h-80"
+              un-sm="w-98 h-98"
+              un-lg="flex justify-center items-center w-full h-full -translate-8"
             >
               <!-- image-bg -->
               <div
-                class:list={[
-                  'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full',
-                  'bg-gradient-to-tl from-green-400 from-50% to-sky-400 to-50%',
-                  'w-48 h-48 blur-2xl',
-                  'sm:w-64 sm:h-64 sm:blur-[3.5rem]',
-                  'lg:w-80 lg:h-80 lg:blur-[4.5rem]',
-                ]}
+                class="w-48 h-48 blur-40 absolute left-1/2 top-1/2 -translate-1/2 rounded-full bg-gradient-to-r from-green from-50% to-sky to-50%"
+                un-sm="w-64 h-64 blur-56"
+                un-lg="w-80 h-80 blur-72"
+                style="--un-gradient-shape: -45deg"
               >
               </div>
               <!-- image-src -->
               <img
-                class:list={[
-                  'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2',
-                  'max-w-48 max-h-48',
-                  'sm:max-w-64 sm:max-h-64',
-                  'lg:max-w-80 lg:max-h-80',
-                ]}
+                class="absolute left-1/2 top-1/2 -translate-1/2 max-w-48 max-h-48"
+                un-sm="max-w-64 max-h-64"
+                un-lg="max-w-80 max-h-80"
                 src={logo.src}
                 alt={logoImgAlt}
               />

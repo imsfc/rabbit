@@ -3,11 +3,11 @@ import { SITE_TITLE } from '@/consts'
 ---
 
 <!-- header -->
-<header class:list={['relative', 'lg:fixed', 'top-0', 'left-0', 'w-full']}>
-  <div class:list={['h-16']}>
+<header class="relative top-0 left-0 w-full" un-lg="fixed">
+  <div class="h-16">
     <div>{SITE_TITLE}</div>
   </div>
 </header>
 
 <!-- header placeholder -->
-<div class:list={['h-16', 'hidden', 'lg:block']}></div>
+<div class="hidden h-16" un-lg="block"></div>
