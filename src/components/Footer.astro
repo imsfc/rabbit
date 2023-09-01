@@ -1,5 +1,7 @@
 ---
 import { SITE_TITLE, SITE_AUTHOR } from '@/consts'
+
+const copyright = `@ ${new Date().getUTCFullYear()} ${SITE_AUTHOR}`
 ---
 
 <footer class="relative px-32 py-6" un-md="py-8">
@@ -8,7 +10,7 @@ import { SITE_TITLE, SITE_AUTHOR } from '@/consts'
       {SITE_TITLE}
     </p>
     <p class="text-sm leading-6 font-500 text-opacity-78">
-      {`Copyright © ${2023} ${SITE_AUTHOR}`}
+      {copyright}
     </p>
   </div>
 </footer>
