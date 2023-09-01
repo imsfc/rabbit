@@ -8,27 +8,21 @@ const logoImgAlt = 'Rabbit'
 ---
 
 <Layout title={`${SITE_TITLE} | ${SITE_DESCRIPTION}`}>
-  <!-- content -->
   <div class="w-full max-w-full grow shrink-0">
-    <!-- home -->
     <div class="pb-24" un-md="pb-32">
-      <!-- hero -->
       <div
         class="-mt-16 px-6 pt-28 pb-12"
         un-sm="px-12 pt-36 pb-16"
         un-lg="px-16"
       >
-        <!-- container -->
         <div
           class="flex flex-col text-center mx-auto max-w-6xl"
           un-lg="flex-row text-left"
         >
-          <!-- main -->
           <div
             class="order-2 relative z-10 grow shrink-0"
             un-lg="order-1 w-2/3 max-w-148"
           >
-            <!-- name -->
             <h1
               class="-tracking-.1 text-transparent font-700 whitespace-pre-wrap mx-auto max-w-98 text-8 leading-10"
               un-sm="max-w-xl text-5xl leading-14"
@@ -39,7 +33,6 @@ const logoImgAlt = 'Rabbit'
                 style="--un-gradient-shape: -60deg">{SITE_TITLE}</span
               >
             </h1>
-            <!-- text -->
             <p
               class="-tracking-.1 whitespace-pre-wrap text-8 leading-10 font-700 mx-auto max-w-98"
               un-sm="max-w-xl text-5xl leading-14"
@@ -47,7 +40,6 @@ const logoImgAlt = 'Rabbit'
             >
               {SITE_DESCRIPTION}
             </p>
-            <!-- tagline -->
             <p
               class="mx-auto max-w-98 pt-2 text-lg font-500 whitespace-pre-wrap text-#3c3c43 text-opacity-78"
               un-sm="pt-3 text-xl leading-8"
@@ -56,15 +48,12 @@ const logoImgAlt = 'Rabbit'
             >
               {HOME_TAGLINE}
             </p>
-            <!-- actions -->
             <div
               class="flex flex-wrap justify-center -m-1.5 pt-6"
               un-sm="pt-8"
               un-lg="justify-start"
             >
-              <!-- action -->
               <div class="p-1.5 shrink-0">
-                <!-- button -->
                 <a
                   class="inline-block whitespace-nowrap touch-manipulation border border-transparent px-5 rounded-full transition-colors ease-[ease] duration-250 text-sm font-600 leading-9.5 text-center text-white bg-green"
                   un-hover="bg-green-5"
@@ -72,9 +61,7 @@ const logoImgAlt = 'Rabbit'
                   href="/blog/">博客</a
                 >
               </div>
-              <!-- action -->
               <div class="p-1.5 shrink-0">
-                <!-- button -->
                 <a
                   class="inline-block whitespace-nowrap touch-manipulation border border-transparent px-5 rounded-full transition-colors ease-[ease] duration-250 text-sm font-600 leading-9.5 text-center bg-zinc-1"
                   un-hover="bg-zinc-2"
@@ -84,18 +71,15 @@ const logoImgAlt = 'Rabbit'
               </div>
             </div>
           </div>
-          <!-- image -->
           <div
             class="order-1 -mx-6 -mt-19 -mb-12"
             un-lg="order-2 min-h-full grow"
           >
-            <!-- image-container -->
             <div
               class="relative mx-auto w-80 h-80"
               un-sm="w-98 h-98"
               un-lg="flex justify-center items-center w-full h-full -translate-8"
             >
-              <!-- image-bg -->
               <div
                 class="w-48 h-48 blur-40 absolute left-1/2 top-1/2 -translate-1/2 rounded-full bg-gradient-to-r from-green from-50% to-sky to-50%"
                 un-sm="w-64 h-64 blur-56"
@@ -103,7 +87,6 @@ const logoImgAlt = 'Rabbit'
                 style="--un-gradient-shape: -45deg"
               >
               </div>
-              <!-- image-src -->
               <img
                 class="absolute left-1/2 top-1/2 -translate-1/2 max-w-48 max-h-48"
                 un-sm="max-w-64 max-h-64"
@@ -117,6 +100,5 @@ const logoImgAlt = 'Rabbit'
       </div>
     </div>
   </div>
-  <!-- footer -->
   <Footer />
 </Layout>
