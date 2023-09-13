@@ -1,10 +1,32 @@
 ---
 import { SITE_TITLE } from '@/consts'
+import ThemeToggle from '@components/ThemeToggle.astro'
+import logo from '@assets/logo.svg'
 ---
 
-<header class="relative top-0 left-0 w-full" un-lg="fixed">
-  <div class="h-16">
-    <div>{SITE_TITLE}</div>
+<header class="h-14">
+  <div class="fixed px-4 w-full h-14 flex justify-between items-center z-50">
+    <div class="flex">
+      <a class="h-6 flex items-center gap-x-2 font-600" href="/">
+        <img class="h-full" src={logo.src} alt={SITE_TITLE} />
+        {SITE_TITLE}
+      </a>
+    </div>
+    <div class="flex items-center gap-x-6">
+      <nav>
+        <ul class="flex items-center gap-x-6">
+          <li>
+            <a class="text-sm leading-6" href="/blog">博客</a>
+          </li>
+          <li>
+            <a class="text-sm leading-6" href="/quick-reference-notes"
+              >速查笔记</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="w-px h-5 bg-zinc-9/10"></div>
+      <ThemeToggle />
+    </div>
   </div>
 </header>
-<div class="hidden h-16" un-lg="block"></div>
